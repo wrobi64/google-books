@@ -15,7 +15,7 @@ export async function bookSearch(q: string | undefined, offset?: number, limit?:
   }
   try {
     const url = `${API_URL}?q=${q}&offset=${offset ?? 0}&limit=${limit ?? 40}`;
-    const response = await fetch(url);
+    const response = await fetch(url, { cache: 'no-store' });
     const data = (await response.json()) as BookData[];
     return data;
   } catch (error: unknown) {

@@ -1,6 +1,6 @@
-export const BookIcon = ({ width, height }: { width: number; height: number; }) => {
+export const BookIcon = ({ className }: { className?: string }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width={width} height={height}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" className={className}>
       { /* Background with rounded corners */ }
       <rect width="200" height="300" fill="#f0f0f0" rx="10" ry="10"/>
       
