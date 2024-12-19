@@ -6,8 +6,8 @@ import Image from 'next/image';
 export function BookList({ books }: { books: BookData[] }) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-5 gap-y-10">
-      {books.map((book: BookData) => (
-        <BookListItem key={book.id} book={book} />
+      {books.map((book: BookData, i) => (
+        <BookListItem key={`${book.id}-${i}`} book={book} />
       ))}
     </div>
   )
@@ -29,7 +29,7 @@ function BookListItem({ book }: { book: BookData }) {
           ) : <BookIcon className="w-250 h-72" /> }
         </div>
         <div className="grow p-3">
-          <h3 className="text-xl sm:text-2xl font-bold line-clamp-2 ">{book.title}</h3>
+          <h3 className="text-xl sm:text-2xl font-bold line-clamp-2 text-gray-800">{book.title}</h3>
           <p className="text-md sm:text-lg text-gray-600 mb-3">{book?.authors?.[0] ?? 'Unknown Author'}</p>
           <p className="text-sm text-gray-700 line-clamp-6">{book.description}</p>
         </div>

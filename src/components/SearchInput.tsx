@@ -51,7 +51,7 @@ export function SearchInput(props: SearchInputProps) {
         value={value}
         onChange={onChange}
         type="search"
-        className="w-full h-14 pl-12 pr-4 text-lg rounded-full shadow-md ring-1 ring-gray-200 outline-none transition-all duration-300 hover:ring-2 hover:ring-blue-200 focus:shadow-lg focus:ring-2 focus:ring-blue-400"
+        className="w-full h-14 pl-12 pr-4 text-lg text-gray-800 rounded-full shadow-md ring-1 ring-gray-200 outline-none transition-all duration-300 hover:ring-2 hover:ring-blue-200 focus:shadow-lg focus:ring-2 focus:ring-blue-400"
         placeholder={placeholder}
       />
       <button onClick={handleUpdateSearchParam} className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition-colors duration-300">Search</button>
